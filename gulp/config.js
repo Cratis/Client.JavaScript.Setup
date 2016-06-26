@@ -1,4 +1,5 @@
-var buildDir = "wwwroot/";
+var buildDir = "public/";
+var source = "./"
 
 export default {
     paths: {
@@ -6,26 +7,27 @@ export default {
         html: [
             "!jspm_packages/**/*",
             "!node_modules/**/*",
-            "!wwwroot/**/*",
-            "**/*.html"
+            "!"+buildDir+"**/*",
+            source+"**/*.html"
         ],
 
         javascript: [
             "!jspm_packages/**/*",
             "!node_modules/**/*",
-            "!wwwroot/**/*",
+            "!"+buildDir+"**/*",
             "!config.js",
             "!gulpfile.js",
             "!build/**/*",
             "!gulp/**/*",
-            "**/*.js"
+            source+"**/*.js"
         ],
 
         less: [
             "!jspm_packages/**/*",
             "!node_modules/**/*",
             "!wwwroot/**/*",
-            "**/*.less"
+            "!"+buildDir+"**/*",
+            source+"**/*.less"
         ],
 
         dist: "./"+buildDir
