@@ -1,6 +1,6 @@
 {
-  "name": "client.javascript.setup",
-  "version": "1.0.0",
+  "name": "cratis.client.javascript.setup",
+  "version": "1.0.1",
   "description": "Setup project for all JavaScript client projects. Reusable setup.",
   "main": "karma.conf.js",
   "scripts": {
@@ -23,7 +23,7 @@
       "core-js": "npm:core-js@^1.1.4"
     }
   },
-  "devDependencies": {
+  "dependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.6.5",
     "babel-plugin-transform-decorators": "^6.6.0",
