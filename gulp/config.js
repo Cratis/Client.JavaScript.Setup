@@ -1,5 +1,6 @@
 let rootDir = process.cwd();
 let distributionDir = `${rootDir}/Distribution`;
+let sourceDir = `${rootDir}/Source`;
 
 export default {
     paths: {
@@ -17,7 +18,7 @@ export default {
             `!${rootDir}/config.js`,
             `!${rootDir}/gulpfile.js`,
             `!${rootDir}/gulp/**/*`,
-            `${rootDir}/**/*.js`
+            `${sourceDir}/**/*.js`
         ],
 
         less: [
@@ -29,6 +30,6 @@ export default {
 
         rootDir: rootDir,
         distributionDir: distributionDir,
-        sourceDir: `${rootDir}/Source`
+        sourceDir: sourceDir
     }
 }
