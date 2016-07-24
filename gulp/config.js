@@ -28,6 +28,7 @@ export default {
         ],
 
         rootDir: rootDir,
-        distributionDir: distributionDir
+        distributionDir: distributionDir,
+        sourceDir: `${rootDir}/Source`
     }
 }

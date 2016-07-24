@@ -42,7 +42,7 @@ export function javaScriptPipeline(stream)
 
 gulp.task("javascript", () => 
 {
-    var stream = gulp.src(config.paths.javascript,{base:config.paths.rootDir})
+    var stream = gulp.src(config.paths.javascript,{base:config.paths.sourceDir})
     javaScriptPipeline(stream);
     return stream;
 });

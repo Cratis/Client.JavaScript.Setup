@@ -33,7 +33,7 @@ function handleFile(file, globs, pipeline, cb) {
 let watchTask = (cb) => {
     console.log("Start Watching");
 
-    let watcher = chokidar.watch(`${config.paths.rootDir}/.`, {
+    let watcher = chokidar.watch(`${config.paths.sourceDir}/.`, {
         persistent: true,
         ignored: `${config.paths.distributionDir}/**/*`,
         ignoreInitial: true,
