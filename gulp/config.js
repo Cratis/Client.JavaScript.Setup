@@ -1,35 +1,33 @@
-var buildDir = "public/";
-var source = "./"
+let rootDir = process.cwd();
+let distributionDir = `${rootDir}/Distribution`;
 
 export default {
     paths: {
-        appFile: "./app.js",
         html: [
-            "!jspm_packages/**/*",
-            "!node_modules/**/*",
-            "!"+buildDir+"**/*",
-            source+"**/*.html"
+            `!${rootDir}/jspm_packages/**/*`,
+            `!${rootDir}/node_modules/**/*`,
+            `!${distributionDir}/**/*`,
+            `${rootDir}/**/*.html`
         ],
 
         javascript: [
-            "!jspm_packages/**/*",
-            "!node_modules/**/*",
-            "!"+buildDir+"**/*",
-            "!config.js",
-            "!gulpfile.js",
-            "!build/**/*",
-            "!gulp/**/*",
-            source+"**/*.js"
+            `!${rootDir}/jspm_packages/**/*`,
+            `!${rootDir}/node_modules/**/*`,
+            `!${distributionDir}/**/*`,
+            `!${rootDir}/config.js`,
+            `!${rootDir}/gulpfile.js`,
+            `!${rootDir}/gulp/**/*`,
+            `${rootDir}/**/*.js`
         ],
 
         less: [
-            "!jspm_packages/**/*",
-            "!node_modules/**/*",
-            "!wwwroot/**/*",
-            "!"+buildDir+"**/*",
-            source+"**/*.less"
+            `!${rootDir}/jspm_packages/**/*`,
+            `!${rootDir}/node_modules/**/*`,
+            `!${distributionDir}/**/*`,
+            `${rootDir}/**/*.less`
         ],
 
-        dist: "./"+buildDir
+        rootDir: rootDir,
+        distributionDir: distributionDir
     }
 }

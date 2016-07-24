@@ -13,8 +13,6 @@ import chokidar from "chokidar";
 
 import multimatch from "multimatch";
 
-import pkg from "../../package.json";
-
 function handleFile(file, globs, pipeline, cb) {
     var result = multimatch(file, globs);
     if (result.length == 0) return;
@@ -34,10 +32,10 @@ function handleFile(file, globs, pipeline, cb) {
 
 let watchTask = (cb) => {
     console.log("Start Watching");
-    
-    let watcher = chokidar.watch("../.", {
+
+    let watcher = chokidar.watch(`${config.paths.rootDir}/.`, {
         persistent: true,
-        ignored: "./public/**/*",
+        ignored: `${config.paths.distributionDir}/**/*`,
         ignoreInitial: true,
         awaitWriteFinish: {
             stabilityThreshold: 200,
