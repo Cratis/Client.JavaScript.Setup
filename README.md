@@ -1,2 +1,2 @@
-# Client.JavaScript.Setup
-Setup project for all JavaScript client projects. Reusable setup.
+# JavaScript.Pipeline
+Pipepline project for all JavaScript projects. Reusable setup.
