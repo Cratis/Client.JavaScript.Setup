@@ -35,14 +35,14 @@ export function javaScriptPipeline(stream)
                 return `..${directory}`;
             }
         }))
-        .pipe(gulp.dest(config.paths.dist));
+        .pipe(gulp.dest(config.paths.distributionDir));
     
     return stream;
 }
 
 gulp.task("javascript", () => 
 {
-    var stream = gulp.src(config.paths.javascript,{base:config.paths.base})
+    var stream = gulp.src(config.paths.javascript,{base:config.paths.rootDir})
     javaScriptPipeline(stream);
     return stream;
 });
