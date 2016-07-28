@@ -1,21 +1,21 @@
 {
-  "name": "cratis.client.javascript.setup",
+  "name": "cratis.javascript.pipeline",
   "version": "1.0.1",
-  "description": "Setup project for all JavaScript client projects. Reusable setup.",
+  "description": "Reusable build and general production template for Cratis JavaScript based projects.",
   "main": "karma.conf.js",
   "scripts": {
     "postinstall": "jspm install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cratis/Client.JavaScript.Setup.git"
+    "url": "git+https://github.com/Cratis/JavaScript.Pipeline.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cratis/Client.JavaScript.Setup/issues"
+    "url": "https://github.com/Cratis/JavaScript.Pipeline/issues"
   },
-  "homepage": "https://github.com/Cratis/Client.JavaScript.Setup#readme",
+  "homepage": "https://github.com/Cratis/JavaScript.Pipeline#readme",
   "jspm": {
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
@@ -52,6 +52,7 @@
     "multimatch": "^2.1.0",
     "phantomjs": "^2.1.3",
     "phantomjs-prebuilt": "^2.1.4",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "systemjs-plugin-json": "^0.1.0"
   }
 }

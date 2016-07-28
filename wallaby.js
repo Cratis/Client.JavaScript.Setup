@@ -3,9 +3,6 @@
 "use strict";
 
 module.exports = function (wallaby) {
-    var process = require("process");
-    var rootDir = process.cwd();
-
     return {
         files: [
             { pattern: "jspm_packages/system.js", instrument: false },
