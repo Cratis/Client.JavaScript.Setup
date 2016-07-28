@@ -4,7 +4,6 @@
   "description": "Reusable build and general production template for Cratis JavaScript based projects.",
   "main": "karma.conf.js",
   "scripts": {
-    "postinstall": "jspm install"
   },
   "repository": {
     "type": "git",
