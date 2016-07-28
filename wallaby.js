@@ -41,6 +41,10 @@ module.exports = function (wallaby) {
             window.expect = chai.expect;
             var should = chai.should();
 
+            // Note:
+            // The reason for the hardcoding of this path is that the "setup" function  is ran in a different
+            // context. Ideally we would read something like the .gitmodules file and dynamically figure this out
+            // or even use __dirname or something to dynamically get the folder in here 
             System.import("./package.json!./Modules/JavaScript.Pipeline/json.js").then(function (pkg) {
                 var systemConfig = {
                     defaultJSExtensions: true,
