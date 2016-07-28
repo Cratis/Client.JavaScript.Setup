@@ -1,6 +1,6 @@
 {
   "name": "cratis.javascript.pipeline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable build and general production template for Cratis JavaScript based projects.",
   "main": "karma.conf.js",
   "scripts": {
