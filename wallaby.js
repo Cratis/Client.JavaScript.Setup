@@ -3,6 +3,7 @@
 "use strict";
 
 module.exports = function (wallaby) {
+    var rootDir = process.cwd();
     return {
         files: [
             { pattern: "jspm_packages/system.js", instrument: false },
@@ -32,7 +33,7 @@ module.exports = function (wallaby) {
         },
 
         middleware: (app, express) => {
-            app.use("/jspm_packages", express.static(require("path").join(__dirname, "jspm_packages")));
+            app.use("/jspm_packages", express.static(require("path").join(rootDir, "jspm_packages")));
         },
 
         setup: function (wallaby) {
