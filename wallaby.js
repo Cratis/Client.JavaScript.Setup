@@ -10,7 +10,7 @@ module.exports = function (wallaby) {
             { pattern: "node_modules/chai-as-promised/chai-as-promised.js", instrument: false },
             { pattern: "node_modules/sinon/lib/sinon.js", instrument: false },
             { pattern: "jspm.config.js", instrument: false },
-            { pattern: "json.js", instrument: false, load: false },
+            { pattern: "node_modules/cratis.javascript.pipeline/json.js", instrument: false, load: false },
             { pattern: "package.json", instrument: false, load: false },
 
             { pattern: "Specifications/**/given/*.js", load: false },
@@ -41,7 +41,7 @@ module.exports = function (wallaby) {
             window.expect = chai.expect;
             var should = chai.should();
 
-            System.import("./package.json!json.js").then(function (pkg) {
+            System.import("./package.json!./node_modules/cratis.javascript.pipeline/json.js").then(function (pkg) {
                 var systemConfig = {
                     defaultJSExtensions: true,
                     transpiler: false,

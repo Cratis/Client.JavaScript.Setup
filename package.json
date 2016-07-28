@@ -1,6 +1,6 @@
 {
   "name": "cratis.javascript.pipeline",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Reusable build and general production template for Cratis JavaScript based projects.",
   "main": "karma.conf.js",
   "scripts": {
@@ -52,7 +52,6 @@
     "multimatch": "^2.1.0",
     "phantomjs": "^2.1.3",
     "phantomjs-prebuilt": "^2.1.4",
-    "require-dir": "^0.3.0",
-    "systemjs-plugin-json": "^0.1.0"
+    "require-dir": "^0.3.0"
   }
 }
