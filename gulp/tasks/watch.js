@@ -48,6 +48,7 @@ let watchTask = (cb) => {
         handleFile(file, config.paths.less, lessPipeline, cb);
         handleFile(file, config.paths.content, staticContentPipeline, cb);
         handleFile(file, config.paths.javascript, javaScriptPipeline, cb);
+        handleFile(file, config.paths.csharp, dotnetPipeline, cb);
     };
 
     watcher

@@ -5,6 +5,7 @@ let sourceDir = `${rootDir}/Source`;
 const _rootDir = new WeakMap();
 const _outputDir = new WeakMap();
 const _sourceDir = new WeakMap();
+const _dotnetProcessString = new WeakMap();
 
 class config {
     constructor() {
@@ -16,6 +17,15 @@ class paths {
     constructor(config) {
         this.config = config;
     }
+
+    get csharp() {
+        return [
+            `${this.sourceDir}/**/*.cs`,
+            `!${this.sourceDir}/**/bin/**/*`,
+            `!${this.sourceDir}/**/obj/**/*`
+        ];
+    }
+    
 
     get html() {
         return [
@@ -88,6 +98,18 @@ class paths {
     }
 
     set sourceDir(value) { _sourceDir.set(this, value); }
+
+    get dotnetProcessString() {
+        if( _dotnetProcessString.has(this) ) {
+            return _dotnetProcessString.get(this);
+        }
+
+        return "bin/Debug";
+    }
+
+    set dotnetProcessString(value) {
+        _dotnetProcessString.set(this, value);
+    }
 }
 
 export default new config();
