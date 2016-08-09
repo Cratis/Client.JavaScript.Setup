@@ -1,4 +1,4 @@
 import gulp from "gulp";
 import config from "../config";
 
-gulp.task("default", ["watch"]);
+gulp.task("default", ["html", "javascript", "less", "staticContent","watch"]);
