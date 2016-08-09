@@ -19,43 +19,45 @@ class paths {
 
     get html() {
         return [
+            `${this.rootDir}/**/*.html`,
             `!${this.rootDir}/jspm_packages/**/*`,
             `!${this.rootDir}/node_modules/**/*`,
-            `!${this.outputDir}/**/*`,
-            `${this.rootDir}/**/*.html`
+            `!${this.outputDir}/**/*`
         ]
     }
 
     get javascript() {
         return [
+            `${this.sourceDir}/**/*.js`,
             `!${this.rootDir}/jspm_packages/**/*`,
             `!${this.rootDir}/node_modules/**/*`,
             `!${this.outputDir}/**/*`,
+            `!${this.rootDir}/jspm.config.js`,
+            `!${this.rootDir}/wallaby.js`,
             `!${this.rootDir}/config.js`,
             `!${this.rootDir}/gulpfile.js`,
-            `!${this.rootDir}/gulp/**/*`,
-            `${this.sourceDir}/**/*.js`
+            `!${this.rootDir}/gulp/**/*`
         ]
     }
 
     get less() {
         return [
+            `${this.rootDir}/**/*.less`,
             `!${this.rootDir}/jspm_packages/**/*`,
             `!${this.rootDir}/node_modules/**/*`,
-            `!${this.outputDir}/**/*`,
-            `${this.rootDir}/**/*.less`
+            `!${this.outputDir}/**/*`
         ];
     }
 
     get content() {
         return [
-            `!${this.rootDir}/node_modules/**/*`,
-            `!${this.outputDir}/**/*`,
             `${this.rootDir}/jspm_packages/**/*`,
             `${this.rootDir}/**/*.jpg`,
             `${this.rootDir}/**/*.jpeg`,
             `${this.rootDir}/**/*.gif`,
-            `${this.rootDir}/**/*.png`
+            `${this.rootDir}/**/*.png`,
+            `!${this.rootDir}/node_modules/**/*`,
+            `!${this.outputDir}/**/*`
         ]
     }
 
