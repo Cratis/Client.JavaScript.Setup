@@ -1,5 +1,6 @@
 import gulp from "gulp";
 import gulp_jspm from "gulp-jspm";
+import util from "gulp-util";
 import sourcemaps from "gulp-sourcemaps";
 import rename from "gulp-rename";
 import concat from "gulp-concat";
