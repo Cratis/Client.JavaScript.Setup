@@ -1,12 +1,13 @@
 import gulp from "gulp";
 import config from "../config";
-
+import util from "gulp-util";
 import less from "gulp-less";
 
 
 export function lessPipeline(stream) {
     stream
         .pipe(less())
+        .on("error", util.log)
         .pipe(gulp.dest(config.paths.outputDir));
     return stream;
 }
