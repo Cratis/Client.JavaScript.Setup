@@ -8,7 +8,7 @@ export function htmlPipeline(stream) {
 }
 
 gulp.task("html", () => {
-    var stream = gulp.src(config.paths.html,{base:config.paths.base});
+    var stream = gulp.src(config.paths.html,{base:config.paths.sourceDir});
     htmlPipeline(stream);
     return stream;
 });
