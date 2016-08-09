@@ -7,7 +7,7 @@ import server from "gulp-express";
 import {javaScriptPipeline} from "./javascript";
 import {htmlPipeline} from "./html";
 import {lessPipeline} from "./less";
-import {contentPipeline} from "./staticContent";
+import {staticContentPipeline} from "./staticContent";
 
 import chokidar from "chokidar";
 
