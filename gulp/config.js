@@ -19,43 +19,43 @@ class paths {
 
     get html() {
         return [
-            `!${this.config.rootDir}/jspm_packages/**/*`,
-            `!${this.config.rootDir}/node_modules/**/*`,
-            `!${this.config.outputDir}/**/*`,
-            `${this.config.rootDir}/**/*.html`
+            `!${this.rootDir}/jspm_packages/**/*`,
+            `!${this.rootDir}/node_modules/**/*`,
+            `!${this.outputDir}/**/*`,
+            `${this.rootDir}/**/*.html`
         ]
     }
 
     get javascript() {
         return [
-            `!${this.config.rootDir}/jspm_packages/**/*`,
-            `!${this.config.rootDir}/node_modules/**/*`,
-            `!${this.config.outputDir}/**/*`,
-            `!${this.config.rootDir}/config.js`,
-            `!${this.config.rootDir}/gulpfile.js`,
-            `!${this.config.rootDir}/gulp/**/*`,
-            `${this.config.sourceDir}/**/*.js`
+            `!${this.rootDir}/jspm_packages/**/*`,
+            `!${this.rootDir}/node_modules/**/*`,
+            `!${this.outputDir}/**/*`,
+            `!${this.rootDir}/config.js`,
+            `!${this.rootDir}/gulpfile.js`,
+            `!${this.rootDir}/gulp/**/*`,
+            `${this.sourceDir}/**/*.js`
         ]
     }
 
     get less() {
         return [
-            `!${this.config.rootDir}/jspm_packages/**/*`,
-            `!${this.config.rootDir}/node_modules/**/*`,
-            `!${this.config.outputDir}/**/*`,
-            `${this.config.rootDir}/**/*.less`
+            `!${this.rootDir}/jspm_packages/**/*`,
+            `!${this.rootDir}/node_modules/**/*`,
+            `!${this.outputDir}/**/*`,
+            `${this.rootDir}/**/*.less`
         ];
     }
 
     get content() {
         return [
-            `!${this.config.rootDir}/node_modules/**/*`,
-            `!${this.config.outputDir}/**/*`,
-            `${this.config.rootDir}/jspm_packages/**/*`,
-            `${this.config.rootDir}/**/*.jpg`,
-            `${this.config.rootDir}/**/*.jpeg`,
-            `${this.config.rootDir}/**/*.gif`,
-            `${this.config.rootDir}/**/*.png`
+            `!${this.rootDir}/node_modules/**/*`,
+            `!${this.outputDir}/**/*`,
+            `${this.rootDir}/jspm_packages/**/*`,
+            `${this.rootDir}/**/*.jpg`,
+            `${this.rootDir}/**/*.jpeg`,
+            `${this.rootDir}/**/*.gif`,
+            `${this.rootDir}/**/*.png`
         ]
     }
 
