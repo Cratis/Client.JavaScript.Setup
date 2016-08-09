@@ -46,7 +46,7 @@ let watchTask = (cb) => {
     let fileHandling = (file) => {
         handleFile(file, config.paths.html, htmlPipeline, cb);
         handleFile(file, config.paths.less, lessPipeline, cb);
-        handleFile(file, config.paths.content, contentPipeline, cb);
+        handleFile(file, config.paths.content, staticContentPipeline, cb);
         handleFile(file, config.paths.javascript, javaScriptPipeline, cb);
     };
 
