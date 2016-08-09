@@ -52,6 +52,7 @@ class paths {
     get content() {
         return [
             `${this.rootDir}/jspm_packages/**/*`,
+            `${this.sourceDir}/jspm.config.js`,
             `${this.rootDir}/**/*.jpg`,
             `${this.rootDir}/**/*.jpeg`,
             `${this.rootDir}/**/*.gif`,
