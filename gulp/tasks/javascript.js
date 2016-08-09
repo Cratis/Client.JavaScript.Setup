@@ -35,7 +35,7 @@ export function javaScriptPipeline(stream)
                 return `..${directory}`;
             }
         }))
-        .pipe(gulp.dest(config.paths.distributionDir));
+        .pipe(gulp.dest(config.paths.outputDir));
     
     return stream;
 }

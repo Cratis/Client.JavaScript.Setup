@@ -35,7 +35,7 @@ let watchTask = (cb) => {
 
     let watcher = chokidar.watch(`${config.paths.sourceDir}/.`, {
         persistent: true,
-        ignored: `${config.paths.distributionDir}/**/*`,
+        ignored: `${config.paths.outputDir}/**/*`,
         ignoreInitial: true,
         awaitWriteFinish: {
             stabilityThreshold: 200,
@@ -63,4 +63,4 @@ gulp.task("watch-noserve", cb => {
     watchTask(cb);
 });
 
-gulp.task("watch", watchTask);
+gulp.task("watch", [html, javascript, less, staticContent, watchTask]);

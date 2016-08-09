@@ -2,7 +2,7 @@ import gulp from "gulp";
 import config from "../config";
 
 export function staticContentPipeline(stream) {
-    stream.pipe(gulp.dest(config.paths.dist));
+    stream.pipe(gulp.dest(config.paths.outputDir));
     return stream;
 }
 

@@ -1,5 +1,5 @@
 let rootDir = process.cwd();
-let distributionDir = `${rootDir}/Distribution`;
+let outputDir = `${rootDir}/Distribution`;
 let sourceDir = `${rootDir}/Source`;
 
 export default {
@@ -7,14 +7,14 @@ export default {
         html: [
             `!${rootDir}/jspm_packages/**/*`,
             `!${rootDir}/node_modules/**/*`,
-            `!${distributionDir}/**/*`,
+            `!${outputDir}/**/*`,
             `${rootDir}/**/*.html`
         ],
 
         javascript: [
             `!${rootDir}/jspm_packages/**/*`,
             `!${rootDir}/node_modules/**/*`,
-            `!${distributionDir}/**/*`,
+            `!${outputDir}/**/*`,
             `!${rootDir}/config.js`,
             `!${rootDir}/gulpfile.js`,
             `!${rootDir}/gulp/**/*`,
@@ -24,12 +24,22 @@ export default {
         less: [
             `!${rootDir}/jspm_packages/**/*`,
             `!${rootDir}/node_modules/**/*`,
-            `!${distributionDir}/**/*`,
+            `!${outputDir}/**/*`,
             `${rootDir}/**/*.less`
         ],
 
+        content: [
+            `!${rootDir}/node_modules/**/*`,
+            `!${outputDir}/**/*`,
+            `${rootDir}/jspm_packages/**/*`,
+            `${rootDir}/**/*.jpg`,
+            `${rootDir}/**/*.jpeg`,
+            `${rootDir}/**/*.gif`,
+            `${rootDir}/**/*.png`
+        ],
+
         rootDir: rootDir,
-        distributionDir: distributionDir,
+        outputDir: outputDir,
         sourceDir: sourceDir
     }
 }

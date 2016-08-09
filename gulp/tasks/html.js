@@ -3,7 +3,7 @@ import config from "../config";
 
 
 export function htmlPipeline(stream) {
-    stream.pipe(gulp.dest(config.paths.dist));
+    stream.pipe(gulp.dest(config.paths.outputDir));
     return stream;
 }
 
