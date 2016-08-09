@@ -24,6 +24,13 @@ export function javaScriptPipeline(stream)
             //sourceRoot: "../",
             //sourceMaps: "inline"
         }))
+        .on("error", (error) => {
+            console.error("**** Babel compile error ****");
+            console.log(error.fileName);
+            console.log(error.message);
+            console.log(error.codeFrame);
+        })
+        
         //.pipe(gulp_jspm())
         //.pipe(concat("all.js"))
         .pipe(sourcemaps.write("./", {
