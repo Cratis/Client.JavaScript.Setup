@@ -63,4 +63,4 @@ gulp.task("watch-noserve", cb => {
     watchTask(cb);
 });
 
-gulp.task("watch", [html, javascript, less, staticContent, watchTask]);
+gulp.task("watch", ["html", "javascript", "less", "staticContent", watchTask]);
