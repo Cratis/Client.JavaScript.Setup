@@ -7,7 +7,7 @@ import less from "gulp-less";
 export function lessPipeline(stream) {
     stream
         .pipe(less())
-        .pipe(gulp.dest(config.paths.dist));
+        .pipe(gulp.dest(config.paths.outputDir));
     return stream;
 }
 
