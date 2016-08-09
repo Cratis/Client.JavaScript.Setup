@@ -8,6 +8,7 @@ import {javaScriptPipeline} from "./javascript";
 import {htmlPipeline} from "./html";
 import {lessPipeline} from "./less";
 import {staticContentPipeline} from "./staticContent";
+import {dotnetPipeline} from "./dotnet";
 
 import chokidar from "chokidar";
 
