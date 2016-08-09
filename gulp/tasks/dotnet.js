@@ -17,9 +17,12 @@ function startDotnet(stream, cb) {
         var processFound = null;
 
         resultList.forEach(process => {
-            if (process.command.indexOf(config.paths.dotnetProcessString) > 0) {
-                processFound = process;
-                return;
+            for( var argumentIndex=0; argumentIndex<process.arguments.length; argumentIndex++ ) {
+                var argument = process.arguments[argumentIndex];
+                if (argument.indexOf(config.paths.dotnetProcessString) > 0) {
+                    processFound = process;
+                    return;
+                }
             }
         });
 
@@ -29,12 +32,13 @@ function startDotnet(stream, cb) {
         };
 
         if (processFound != null) {
-            ps.kill(processFound.pid, (error) => {
-
-                if (error) throw new Error(error);
-                
-                dotnetStart();
-            });
+            try {
+                ps.kill(processFound.pid, (error) => {
+                    dotnetStart();
+                });
+            } catch( e ) {
+                // Do nothing
+            }
         } else {
             dotnetStart();
         }
